@@ -1,0 +1,11 @@
+extends layout
+block scripts
+  script(src='/javascripts/jquery-min.js')
+  script(src='/javascripts/posts.js')
+  script.
+    $(document).ready(function() { getPosts() });
+    
+block content
+  p Hi, #{user.displayName}
+  p Please select the videos you would like to add to a playlist
+  #videos

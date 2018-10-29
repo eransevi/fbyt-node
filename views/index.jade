@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= 'Welcome to FBYR'
+  if (!user) 
+    p Please 
+      a(href="/login/facebook")| login to facebook 
+      | to continue
+  else
+    p Click 
+      a(href="/facebook")|next 
+      | to select your videos
